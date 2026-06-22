@@ -68,5 +68,5 @@
   <text class="s-stat-l" x="668" y="292" text-anchor="middle">IOPS</text>
 
   <!-- Note -->
-  <text class="s-sub" x="400" y="356" text-anchor="middle" style="font-style:italic">EC 2+1 tolerates simultaneous SSD &amp; node failures · 66% usable efficiency vs 3-way replication</text>
+  <text class="s-sub" x="400" y="392" text-anchor="middle" style="font-style:italic">EC 2+1 tolerates simultaneous SSD &amp; node failures · 66% usable efficiency vs 3-way replication</text>
 </svg>

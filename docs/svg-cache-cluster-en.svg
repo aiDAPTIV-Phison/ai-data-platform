@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 488" fill="none" role="img" aria-label="GPU cluster sharing one KV cache pool over high-speed interconnect">
+  <style>
+    svg { color-scheme: light dark; --ink: 228, 230, 238; }
+    @media (prefers-color-scheme: light) { svg { --ink: 30, 32, 44; } }
+    text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+    .c-title  { fill: #f7941d; font-size: 16px; font-weight: 700; letter-spacing: 0.03em; }
+    .c-sub    { fill: rgba(var(--ink), 0.55); font-size: 11px; font-weight: 500; }
+    .c-name   { fill: rgba(var(--ink), 0.90); font-size: 13px; font-weight: 700; }
+    .c-role   { fill: rgba(var(--ink), 0.50); font-size: 9.5px; font-weight: 600; letter-spacing: 0.02em; }
+    .c-tile-t { fill: rgba(var(--ink), 0.72); font-size: 10px; font-weight: 700; letter-spacing: 0.04em; }
+    .c-bar-t  { fill: #f7941d; font-size: 12px; font-weight: 700; letter-spacing: 0.02em; }
+    .c-pool-l { fill: #f7941d; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; }
+
+    .c-card   { fill: rgba(var(--ink), 0.04); stroke: rgba(var(--ink), 0.15); stroke-width: 1; }
+    .c-tile   { fill: rgba(var(--ink), 0.06); stroke: rgba(var(--ink), 0.16); stroke-width: 0.8; }
+    .c-bar    { fill: rgba(247,148,29,0.10); stroke: #f7941d; stroke-width: 1.4; }
+    .c-pool   { fill: rgba(247,148,29,0.06); stroke: #f7941d; stroke-width: 1.4; }
+    .c-ssd    { fill: rgba(247,148,29,0.10); stroke: rgba(247,148,29,0.45); stroke-width: 0.8; }
+    .c-ssd-t  { fill: #f7941d; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; }
+    .c-wire   { stroke: rgba(247,148,29,0.55); stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-dasharray: 5 4; animation: cFlow 0.8s linear infinite; }
+    @keyframes cFlow { to { stroke-dashoffset: -18; } }
+  </style>
+
+  <!-- Header -->
+  <text class="c-title" x="40" y="34">Cluster Inference with KV Cache Reuse</text>
+  <text class="c-sub"   x="40" y="54">Existing GPU servers share one KV cache pool over high-speed interconnect — no new GPUs required</text>
+
+  <!-- ── GPU compute tier (top) ── -->
+  <!-- GPU Server 1 -->
+  <rect class="c-card" x="40" y="80" width="210" height="96" rx="12" />
+  <text class="c-name" x="60" y="110">GPU Server 1</text>
+  <text class="c-role" x="60" y="128">Compute Node</text>
+  <rect class="c-tile" x="60"  y="142" width="80" height="26" rx="7" /><text class="c-tile-t" x="100" y="159" text-anchor="middle">VRAM</text>
+  <rect class="c-tile" x="150" y="142" width="80" height="26" rx="7" /><text class="c-tile-t" x="190" y="159" text-anchor="middle">DRAM</text>
+
+  <!-- GPU Server 2 -->
+  <rect class="c-card" x="275" y="80" width="210" height="96" rx="12" />
+  <text class="c-name" x="295" y="110">GPU Server 2</text>
+  <text class="c-role" x="295" y="128">Compute Node</text>
+  <rect class="c-tile" x="295" y="142" width="80" height="26" rx="7" /><text class="c-tile-t" x="335" y="159" text-anchor="middle">VRAM</text>
+  <rect class="c-tile" x="385" y="142" width="80" height="26" rx="7" /><text class="c-tile-t" x="425" y="159" text-anchor="middle">DRAM</text>
+
+  <!-- GPU Server 3 -->
+  <rect class="c-card" x="510" y="80" width="210" height="96" rx="12" />
+  <text class="c-name" x="530" y="110">GPU Server 3</text>
+  <text class="c-role" x="530" y="128">Compute Node</text>
+  <rect class="c-tile" x="530" y="142" width="80" height="26" rx="7" /><text class="c-tile-t" x="570" y="159" text-anchor="middle">VRAM</text>
+  <rect class="c-tile" x="620" y="142" width="80" height="26" rx="7" /><text class="c-tile-t" x="660" y="159" text-anchor="middle">DRAM</text>
+
+  <!-- ── GPU → interconnect wires ── -->
+  <path class="c-wire" d="M145 176 L145 216" />
+  <path class="c-wire" d="M380 176 L380 216" />
+  <path class="c-wire" d="M615 176 L615 216" />
+
+  <!-- ── High-speed interconnect bar ── -->
+  <rect class="c-bar" x="40" y="216" width="680" height="32" rx="9" />
+  <text class="c-bar-t" x="380" y="236" text-anchor="middle">High-speed Interconnect · InfiniBand / RoCE</text>
+
+  <!-- ── interconnect → pool wires ── -->
+  <path class="c-wire" d="M320 248 L320 288" />
+  <path class="c-wire" d="M380 248 L380 288" />
+  <path class="c-wire" d="M440 248 L440 288" />
+
+  <!-- ── Shared cache pool (bottom) ── -->
+  <rect class="c-pool" x="40" y="288" width="680" height="164" rx="14" />
+  <text class="c-pool-l" x="380" y="312" text-anchor="middle">SHARED CACHE POOL</text>
+
+  <!-- Cache Server 1 -->
+  <rect class="c-card" x="70" y="322" width="290" height="110" rx="12" />
+  <text class="c-name" x="94" y="350">Cache Server 1</text>
+  <text class="c-role" x="94" y="368">Shared Cache Node</text>
+  <rect class="c-ssd" x="94"  y="384" width="68" height="28" rx="7" /><text class="c-ssd-t" x="128" y="402" text-anchor="middle">SSD</text>
+  <rect class="c-ssd" x="177" y="384" width="68" height="28" rx="7" /><text class="c-ssd-t" x="211" y="402" text-anchor="middle">SSD</text>
+  <rect class="c-ssd" x="260" y="384" width="68" height="28" rx="7" /><text class="c-ssd-t" x="294" y="402" text-anchor="middle">SSD</text>
+
+  <!-- Cache Server 2 -->
+  <rect class="c-card" x="400" y="322" width="290" height="110" rx="12" />
+  <text class="c-name" x="424" y="350">Cache Server 2</text>
+  <text class="c-role" x="424" y="368">Shared Cache Node</text>
+  <rect class="c-ssd" x="424" y="384" width="68" height="28" rx="7" /><text class="c-ssd-t" x="458" y="402" text-anchor="middle">SSD</text>
+  <rect class="c-ssd" x="507" y="384" width="68" height="28" rx="7" /><text class="c-ssd-t" x="541" y="402" text-anchor="middle">SSD</text>
+  <rect class="c-ssd" x="590" y="384" width="68" height="28" rx="7" /><text class="c-ssd-t" x="624" y="402" text-anchor="middle">SSD</text>
+
+  <!-- Note -->
+  <text class="c-sub" x="380" y="472" text-anchor="middle" style="font-style:italic">VRAM → DRAM → SSD tiered cache · capacity scales on demand while GPU compute cost drops</text>
+</svg>

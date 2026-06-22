@@ -12,16 +12,13 @@
 
 <a href="README.md">English</a> · <strong>繁體中文</strong>
 
-[官方網站](https://phison.ai) · [生態系](https://phison.ai/ecosystem/) · [AISO](https://phison.ai/aiso/) · [聯絡我們](https://phison.ai/contact/) · [社群討論](https://github.com/AIDataPlatform/Community/discussions) · [Phison](https://www.phison.com)
+[官方網站](https://phison.ai) · [生態系](https://phison.ai/ecosystem/) · [AISO](https://phison.ai/aiso/) · [聯絡我們](https://phison.ai/contact/) · [社群討論](https://github.com/AIDataPlatform/Community/discussions) 
 
-[GPU Server](https://phison.ai/gpu-server/) · [Cache Server](https://phison.ai/cache-server/) · [Storage Server](https://phison.ai/storage-server/) · [HCI](https://phison.ai/hci/)
-
-[![Website](https://img.shields.io/badge/官方網站-Live-f7941d?style=flat-square)](https://phison.ai)
-![Made by Phison](https://img.shields.io/badge/Made_by-Phison-f7941d?style=flat-square)
-![Enterprise AI](https://img.shields.io/badge/Enterprise-AI_Infrastructure-1e202c?style=flat-square)
-![200% CCU](https://img.shields.io/badge/200%25+-CCU-f7941d?style=flat-square)
-![500% TTFT](https://img.shields.io/badge/500%25+-TTFT-f7941d?style=flat-square)
-![50% GPU](https://img.shields.io/badge/GPU_-50%25-17a745?style=flat-square)
+[![GPU Server](https://img.shields.io/badge/GPU_Server-F7941D?style=for-the-badge&logoColor=white)](https://phison.ai/gpu-server/)
+[![Cache Server](https://img.shields.io/badge/Cache_Server-F7941D?style=for-the-badge&logoColor=white)](https://phison.ai/cache-server/)
+[![Storage Server](https://img.shields.io/badge/Storage_Server-F7941D?style=for-the-badge&logoColor=white)](https://phison.ai/storage-server/)
+[![HCI](https://img.shields.io/badge/HCI-F7941D?style=for-the-badge&logoColor=white)](https://phison.ai/hci/)
+[![Made by Phison](https://img.shields.io/badge/Made_by-Phison-f7941d?style=flat-square)](https://www.phison.com)
 
 </div>
 

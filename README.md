@@ -12,16 +12,14 @@
 
 <strong>English</strong> · <a href="README.zh-TW.md">繁體中文</a>
 
-[Website](https://phison.ai) · [Ecosystem](https://phison.ai/ecosystem/) · [AISO](https://phison.ai/aiso/) · [Contact](https://phison.ai/contact/) · [Discussions](https://github.com/AIDataPlatform/Community/discussions) · [Phison](https://www.phison.com)
+[Website](https://phison.ai) · [Ecosystem](https://phison.ai/ecosystem/) · [AISO](https://phison.ai/aiso/) · [Contact](https://phison.ai/contact/) · [Discussions](https://github.com/AIDataPlatform/Community/discussions)
 
-[GPU Server](https://phison.ai/gpu-server/) · [Cache Server](https://phison.ai/cache-server/) · [Storage Server](https://phison.ai/storage-server/) · [HCI](https://phison.ai/hci/)
+[![GPU Server](https://img.shields.io/badge/GPU_Server-F7941D?style=for-the-badge&logoColor=white)](https://phison.ai/gpu-server/)
+[![Cache Server](https://img.shields.io/badge/Cache_Server-F7941D?style=for-the-badge&logoColor=white)](https://phison.ai/cache-server/)
+[![Storage Server](https://img.shields.io/badge/Storage_Server-F7941D?style=for-the-badge&logoColor=white)](https://phison.ai/storage-server/)
+[![HCI](https://img.shields.io/badge/HCI-F7941D?style=for-the-badge&logoColor=white)](https://phison.ai/hci/)
 
-
-![Made by Phison](https://img.shields.io/badge/Made_by-Phison-f7941d?style=flat-square)
-![Enterprise AI](https://img.shields.io/badge/Enterprise-AI_Infrastructure-1e202c?style=flat-square)
-![200% CCU](https://img.shields.io/badge/200%25+-CCU-f7941d?style=flat-square)
-![500% TTFT](https://img.shields.io/badge/500%25+-TTFT-f7941d?style=flat-square)
-![50% GPU](https://img.shields.io/badge/GPU_-50%25-17a745?style=flat-square)
+[![Made by Phison](https://img.shields.io/badge/Made_by-Phison-f7941d?style=flat-square)](https://www.phison.com)
 
 </div>
 
@@ -194,6 +192,10 @@ aiDAPTIV Cache Memory extends effective AI memory across GPU memory, system memo
 
 Once produced, KV cache is shared across the entire cluster. Long prompts, multi-turn dialogue, agent workflows, and RAG prefixes don't have to run from scratch every time — Time-to-First-Token drops immediately.
 
+<p align="center">
+  <img src="docs/svg-cache-cluster-en.svg" alt="GPU cluster sharing one KV cache pool over high-speed interconnect" width="800" />
+</p>
+
 <table>
 <tr>
 <td align="center" width="33%">
@@ -213,6 +215,21 @@ Once produced, KV cache is shared across the entire cluster. Long prompts, multi
   <h3>Faster TTFT</h3>
   <p>Hit-and-return replaces recompute — 5× faster time-to-first-token.</p>
   <img src="docs/svg-hit-rate.svg" alt="Shared cache hit" width="220" />
+</td>
+</tr>
+</table>
+
+> Real performance gains from production deployments.
+
+<table>
+<tr>
+<td width="50%">
+  <h4>Higher Return on Investment</h4>
+  <p>aiDAPTIV reduces dependence on high-end GPUs and VRAM waste, cutting cost while maintaining throughput. As demand grows, the platform scales horizontally — no architecture redesign needed — so your initial investment keeps delivering value.</p>
+</td>
+<td width="50%">
+  <h4>Rapid Deployment</h4>
+  <p>Compress traditional AI platform adoption from months to days. Pre-integrated modules shorten the distance from PoC to production.</p>
 </td>
 </tr>
 </table>
