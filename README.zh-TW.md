@@ -1,10 +1,8 @@
 <div align="center">
 
 <a href="https://phison.ai">
-  <img src="docs/phison-aidp.svg" width="300" alt="Phison AI Data Platform" />
+  <img src="docs/phison-aidp.svg" width="480" alt="Phison AI Data Platform" />
 </a>
-
-# AI Data Platform
 
 ### 企業級 AI 基礎平台 — 從原型到量產
 
