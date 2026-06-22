@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 130" fill="none" role="img" aria-label="Linear scale-out — adding nodes raises throughput without redeploying the model">
+  <style>
+    svg { color-scheme: light dark; --ink: 228, 230, 238; }
+    @media (prefers-color-scheme: light) { svg { --ink: 30, 32, 44; } }
+    text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .ill-label { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; fill: rgba(var(--ink), 0.48); }
+    .scale-throughput { stroke: #f7941d; stroke-width: 1.2; stroke-linecap: round; stroke-dasharray: 4 3; animation: scaleFlow 1s linear infinite; }
+    .scale-throughput-arrow { fill: #f7941d; opacity: 0.85; }
+    .scale-wire { stroke: rgba(var(--ink), 0.55); stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 3 3; animation: scaleFlow 0.8s linear infinite; }
+    .scale-node { fill: rgba(var(--ink), 0.08); stroke: rgba(var(--ink), 0.5); stroke-width: 1; animation: scaleFlicker 2.6s ease-in-out infinite; }
+    .scale-chip { fill: rgba(var(--ink), 0.55); animation: scaleFlicker 2.2s ease-in-out infinite; }
+    .scale-pulse { fill: none; stroke: #f7941d; stroke-width: 1; opacity: 0; transform-box: fill-box; transform-origin: center; animation: scalePulseRing 2.5s ease-out infinite; }
+    .scale-plus line { stroke: rgba(var(--ink), 0.6); stroke-width: 1.5; stroke-linecap: round; animation: scaleFlicker 1.8s ease-in-out infinite; }
+    .scale-meter { fill: rgba(var(--ink), 0.4); animation: scaleFlicker 2.4s ease-in-out infinite; }
+    @keyframes scaleFlow { to { stroke-dashoffset: -6; } }
+    @keyframes scaleFlicker { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+    @keyframes scalePulseRing { 0% { transform: scale(0.8); opacity: 0.7; } 100% { transform: scale(1.6); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .scale-throughput, .scale-wire, .scale-node, .scale-chip, .scale-pulse, .scale-plus line, .scale-meter { animation: none; opacity: 0.6; } }
+  </style>
+
+  <!-- Throughput arrow at top -->
+  <line class="scale-throughput" x1="30" y1="24" x2="190" y2="24" />
+  <polygon class="scale-throughput-arrow" points="190,24 184,20 184,28" />
+  <text class="ill-label" x="94" y="18">throughput</text>
+
+  <!-- Connection wires between nodes -->
+  <line class="scale-wire" x1="54"  y1="65" x2="74"  y2="65" style="animation-delay:0.2s" />
+  <line class="scale-wire" x1="102" y1="65" x2="122" y2="65" style="animation-delay:0.6s" />
+  <line class="scale-wire" x1="150" y1="65" x2="170" y2="65" style="animation-delay:1s" />
+
+  <!-- Server nodes -->
+  <rect class="scale-node" x="26"  y="51" width="28" height="28" rx="5" style="animation-delay:0s" />
+  <rect class="scale-chip" x="34"  y="59" width="12" height="12" rx="2" style="animation-delay:0.1s" />
+  <rect class="scale-node" x="74"  y="51" width="28" height="28" rx="5" style="animation-delay:0.4s" />
+  <rect class="scale-chip" x="82"  y="59" width="12" height="12" rx="2" style="animation-delay:0.5s" />
+  <rect class="scale-node" x="122" y="51" width="28" height="28" rx="5" style="animation-delay:0.8s" />
+  <rect class="scale-chip" x="130" y="59" width="12" height="12" rx="2" style="animation-delay:0.9s" />
+  <rect class="scale-node" x="170" y="51" width="28" height="28" rx="5" style="animation-delay:1.2s" />
+  <rect class="scale-chip" x="178" y="59" width="12" height="12" rx="2" style="animation-delay:1.3s" />
+  <circle class="scale-pulse" cx="184" cy="65" r="18" style="animation-delay:1.2s" />
+
+  <!-- Plus sign for "add new node" -->
+  <g class="scale-plus" style="animation-delay:1.6s">
+    <line x1="208" y1="60" x2="208" y2="70" />
+    <line x1="203" y1="65" x2="213" y2="65" />
+  </g>
+
+  <!-- Scale indicators at bottom -->
+  <rect class="scale-meter" x="30"  y="96" width="20" height="4"  rx="1" style="animation-delay:0s" />
+  <rect class="scale-meter" x="78"  y="96" width="20" height="6"  rx="1" style="animation-delay:0.4s" />
+  <rect class="scale-meter" x="126" y="96" width="20" height="8"  rx="1" style="animation-delay:0.8s" />
+  <rect class="scale-meter" x="174" y="96" width="20" height="10" rx="1" style="animation-delay:1.2s" />
+</svg>

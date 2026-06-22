@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 130" fill="none" role="img" aria-label="Lower inference cost — idle GPU capacity fades as per-token cost trends down">
+  <style>
+    svg { color-scheme: light dark; --ink: 228, 230, 238; }
+    @media (prefers-color-scheme: light) { svg { --ink: 30, 32, 44; } }
+    .cost-axis { stroke: rgba(var(--ink), 0.28); stroke-width: 1; stroke-linecap: round; }
+    .cost-bar-active { fill: rgba(var(--ink), 0.55); animation: costPulse 2.4s ease-in-out infinite; }
+    .cost-bar-idle { fill: rgba(var(--ink), 0.12); stroke: rgba(var(--ink), 0.25); stroke-width: 0.5; stroke-dasharray: 2 2; animation: costFadeIdle 3s ease-in-out infinite; }
+    .cost-trend { stroke: #f7941d; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; fill: none; stroke-dasharray: 4 3; animation: costFlow 1.2s linear infinite; }
+    .cost-arrow { fill: #f7941d; opacity: 0.9; animation: costPulse 2s ease-in-out infinite; }
+    .cost-token { fill: rgba(var(--ink), 0.7); transform-box: fill-box; transform-origin: center; animation: costFlicker 2.2s ease-in-out infinite; }
+    @keyframes costPulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+    @keyframes costFadeIdle { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.08; } }
+    @keyframes costFlow { to { stroke-dashoffset: -7; } }
+    @keyframes costFlicker { 0%, 100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 1; transform: scale(1.3); } }
+    @media (prefers-reduced-motion: reduce) { .cost-bar-active, .cost-bar-idle, .cost-trend, .cost-arrow, .cost-token { animation: none; opacity: 0.6; } }
+  </style>
+
+  <!-- Axis -->
+  <line class="cost-axis" x1="24" y1="16" x2="24" y2="108" />
+  <line class="cost-axis" x1="24" y1="108" x2="200" y2="108" />
+
+  <!-- GPU utilisation bars (active solid + idle fading cap) -->
+  <rect class="cost-bar-active" x="36"  y="48" width="20" height="38" rx="2" style="animation-delay:0s" />
+  <rect class="cost-bar-idle"   x="36"  y="48" width="20" height="22" rx="2" style="animation-delay:0.15s" />
+  <rect class="cost-bar-active" x="68"  y="36" width="20" height="54" rx="2" style="animation-delay:0.3s" />
+  <rect class="cost-bar-idle"   x="68"  y="36" width="20" height="18" rx="2" style="animation-delay:0.45s" />
+  <rect class="cost-bar-active" x="100" y="54" width="20" height="28" rx="2" style="animation-delay:0.6s" />
+  <rect class="cost-bar-idle"   x="100" y="54" width="20" height="26" rx="2" style="animation-delay:0.75s" />
+  <rect class="cost-bar-active" x="132" y="28" width="20" height="66" rx="2" style="animation-delay:0.9s" />
+  <rect class="cost-bar-idle"   x="132" y="28" width="20" height="14" rx="2" style="animation-delay:1.05s" />
+  <rect class="cost-bar-active" x="164" y="42" width="20" height="46" rx="2" style="animation-delay:1.2s" />
+  <rect class="cost-bar-idle"   x="164" y="42" width="20" height="20" rx="2" style="animation-delay:1.35s" />
+
+  <!-- Trend arrow descending -->
+  <polyline class="cost-trend" points="40,38 78,44 110,50 142,58 174,68" />
+  <polygon class="cost-arrow" points="174,68 168,62 170,70" />
+
+  <!-- Token symbols -->
+  <circle class="cost-token" cx="46"  cy="34" r="3" style="animation-delay:0s" />
+  <circle class="cost-token" cx="88"  cy="40" r="3" style="animation-delay:0.4s" />
+  <circle class="cost-token" cx="152" cy="56" r="3" style="animation-delay:0.8s" />
+</svg>

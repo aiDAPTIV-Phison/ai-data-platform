@@ -161,23 +161,6 @@ aiDAPTIV Cache Memory extends effective AI memory across GPU memory, system memo
   <img src="docs/svg-training-compare-en.svg" alt="Traditional vs Phison aiDAPTIV training architecture" width="800" />
 </p>
 
-<table>
-<tr>
-<td width="33%" valign="top">
-  <h4>Disaggregated AI Infrastructure</h4>
-  <p>Disaggregated architecture raises the scalability and resource utilization of AI systems.</p>
-</td>
-<td width="33%" valign="top">
-  <h4>One-Stop AI Deployment Platform</h4>
-  <p>Provides a complete one-stop AI solution spanning hardware, platform, aiDAPTIV, AI modules, and SaaS applications to significantly shorten the AI adoption lifecycle.</p>
-</td>
-<td width="33%" valign="top">
-  <h4>AI Software Ecosystem Integration</h4>
-  <p>Integrates ISVs, SIs, open-source components, and AI ecosystem partners to accelerate enterprise AI commercialization and deployment.</p>
-</td>
-</tr>
-</table>
-
 ---
 
 ## Cache Server Benefits
@@ -213,25 +196,6 @@ Once produced, KV cache is shared across the entire cluster. Long prompts, multi
 </tr>
 </table>
 
-> Real performance gains from production deployments.
-
-<table>
-<tr>
-<td width="50%">
-  <h4>Higher Return on Investment</h4>
-  <p>aiDAPTIV reduces dependence on high-end GPUs and VRAM waste, cutting cost while maintaining throughput. As demand grows, the platform scales horizontally — no architecture redesign needed — so your initial investment keeps delivering value.</p>
-</td>
-<td width="50%">
-  <h4>Rapid Deployment</h4>
-  <p>Compress traditional AI platform adoption from months to days. Pre-integrated modules shorten the distance from PoC to production.</p>
-</td>
-</tr>
-</table>
-
-<p align="center">
-  <img src="docs/svg-inference-capacity-en.svg" alt="Inference Capacity Explorer" width="800" />
-</p>
-
 ---
 
 ## GPU Server Benefits
@@ -244,17 +208,6 @@ Compare concurrent user capacity and inference metrics with and without aiDAPTIV
   <img src="docs/svg-gpu-results-en.svg" alt="GPU Server concurrent users with and without aiDAPTIV" width="800" />
 </p>
 
-> **Inference Speed — Multi-GPU DAS Benchmark**
-
-| GPU | Model | aiDAPTIV Cache | Users (w/o → w/) | TTFT (w/o → w/) | TPS (w/o → w/) |
-| --- | --- | --- | --- | --- | --- |
-| RTX 6000 Ada ×8 | GPT-OSS-120B | AI100 ×2 | 10 → **40** | 6.7s → **2.3s** | 28.3 → 28.0 |
-| RTX PRO 6000 ×8 | GPT-OSS-120B | AI100 ×2 | 20 → **60** | 10.1s → **2.6s** | 18.8 → **21.3** |
-| H200 ×8 | Llama 3.3 70B | AI200 ×4 | 20 → **100** | 7.4s → 8.3s | 21.7 → **22.2** |
-| B300 ×8 | Llama 3.3 70B | AI200 ×8 | 60 → **180** | 9.4s → 9.9s | 16.5 → **17.7** |
-
-> Benchmark: TTFT < 10 s · TPS > 20 tokens/sec · input token length = 16K.
-
 ---
 
 ## Storage Server Benefits
@@ -266,5 +219,33 @@ Storage Server converges Block, File, and Object storage onto a single cluster �
 <p align="center">
   <img src="docs/svg-storage-access-en.svg" alt="Three access modes converging on one unified storage platform" width="800" />
 </p>
+
+---
+
+## HCI Benefits
+
+> **Maximize GPU Usage Rate — One Unified Control Plane**
+
+Phison HCI unifies heterogeneous GPU/XPU, storage, and VM resources under a single control plane. Proprietary vGPU partitioning, distributed KV cache sharing, and automatic failover deliver measurable performance and efficiency gains across the cluster.
+
+<table>
+<tr>
+<td align="center" width="33%">
+  <h3>Lower Inference Cost</h3>
+  <p>Reduce idle resources and directly lower the per-token inference cost.</p>
+  <img src="docs/svg-cost.svg" alt="Lower inference cost" width="220" />
+</td>
+<td align="center" width="33%">
+  <h3>Linear Scale-Out</h3>
+  <p>Add new nodes to linearly increase throughput without redeploying the model.</p>
+  <img src="docs/svg-scale-out.svg" alt="Linear scale-out" width="220" />
+</td>
+<td align="center" width="33%">
+  <h3>Higher Concurrency</h3>
+  <p>Combined with vGPU partitioning, a single host serves more concurrent requests simultaneously.</p>
+  <img src="docs/svg-vgpu-concurrency.svg" alt="Higher concurrency" width="220" />
+</td>
+</tr>
+</table>
 
 ---
