@@ -32,17 +32,14 @@
 <td align="center" width="33%">
   <h2><strong>Day 1</strong></h2>
   <h3>Ready to Run</h3>
-  <p>More than a server — a turnkey AI department, ready out of the box. Scale seamlessly from infrastructure to applications, skipping months of complex system integration.</p>
 </td>
 <td align="center" width="33%">
   <h2><strong>1/5</strong></h2>
   <h3>Hardware Budget</h3>
-  <p>Phison's pioneering Pascari aiDAPTIV™ technology delivers secure, enterprise-grade LLM fine-tuning and inference at one-fifth the hardware cost, putting AI within reach of every organization.</p>
 </td>
 <td align="center" width="33%">
   <h2><strong>Anywhere</strong></h2>
   <h3>Ask AI</h3>
-  <p>Your data stays in place, secure. A zero-migration architecture lets you query distributed data directly in natural language — real-time business insight with nothing to move.</p>
 </td>
 </tr>
 </table>

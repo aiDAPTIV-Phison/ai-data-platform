@@ -31,17 +31,14 @@
 <td align="center" width="33%">
   <h2><strong>Day 1</strong></h2>
   <h3>開機即用</h3>
-  <p>不只是一台伺服器，更是開箱即用的完整 AI 部門。從基礎架構到應用程式皆可無縫擴充，省去數月繁雜的系統整合。</p>
 </td>
 <td align="center" width="33%">
   <h2><strong>1/5</strong></h2>
   <h3>硬體預算</h3>
-  <p>群聯獨創 Pascari aiDAPTIV™ 技術，以 1/5 的硬體成本提供安全、企業級的 LLM 微調與推理，讓各規模企業皆能輕鬆擁抱 AI。</p>
 </td>
 <td align="center" width="33%">
   <h2><strong>Anywhere</strong></h2>
   <h3>詢問 AI</h3>
-  <p>數據原地不動，安全無虞。零遷移架構支援以自然語言直接查詢分散數據，無需搬移即可即時獲取商業洞察。</p>
 </td>
 </tr>
 </table>
